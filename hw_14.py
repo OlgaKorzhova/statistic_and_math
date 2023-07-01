@@ -1,0 +1,6 @@
+x = np.array([6.9, 6.1, 6.2, 6.8, 7.5, 6.3, 6.4, 6.9, 6.7, 6.1])
+x_mean = x.mean()
+x_std = x.std(ddof = 1)
+x_mean_std = x_std / (np.sqrt(len(x)))
+result = t_stat(x_mean, x_mean_std, len(x) - 1, 1 - 0.95, 'two-sided')
+print(f"Доверительный интервал: {result}")
